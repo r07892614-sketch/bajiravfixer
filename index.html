@@ -355,7 +355,7 @@ Jo Riport deta hu vhi hota h / Pura market copi krta h Bajirav ki
         <div class="bottom-text">
           Join the official channel of <strong>BAJIRAV FIXER™🏏</strong>
         </div>
-        <button id="joinBtn" class="join-btn">
+        <button id="joinBtnBottom" class="join-btn">
           <span class="icon">🚀</span>
           <span>Free [BAJIRAV FIXER™🏏] Join</span>
         </button>
@@ -368,6 +368,8 @@ Jo Riport deta hu vhi hota h / Pura market copi krta h Bajirav ki
     let timeLeft = 60;
     const timerEl = document.getElementById("timer");
     const joinBtn = document.getElementById("joinBtn");
+    const joinBtnBottom = document.getElementById("joinBtnBottom");
+
 
     function updateTimer() {
       const s = timeLeft < 10 ? "0" + timeLeft : timeLeft;
@@ -398,6 +400,17 @@ Jo Riport deta hu vhi hota h / Pura market copi krta h Bajirav ki
 
       window.location.href = telegramUrl;
     });
+
+    joinBtnBottom.addEventListener("click", function () {
+      if (joinBtnBottom.disabled) return;
+
+      // Yaha apna real Telegram channel link daalo
+      const telegramUrl = "https://t.me/+-Cm92stj4240ZWQ1";
+
+      window.location.href = telegramUrl;
+    });
+    
   </script>
 </body>
 </html>
+
