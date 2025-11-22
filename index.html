@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BAJIRAV FIXER™🏏 – Join Channel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
+    }
+
+    body {
+      background: #e5e7eb;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      color: #111827;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 480px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      border-left: 1px solid #d1d5db;
+      border-right: 1px solid #d1d5db;
+    }
+
+    /* Top section */
+    .top {
+      padding: 16px 14px 10px;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .top-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .top-name {
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    .top-subs {
+      font-size: 0.82rem;
+      color: #6b7280;
+    }
+
+    /* Center main content */
+    .main {
+      flex: 1;
+      padding: 18px 16px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .center-logo-wrap {
+      margin-top: 4px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .center-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #f3f4f6;
+    }
+
+    .center-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .channel-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .subs-line {
+      font-size: 0.85rem;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    .desc {
+      margin-top: 6px;
+      width: 100%;
+      font-size: 0.9rem;
+      color: #111827;
+      line-height: 1.55;
+      white-space: pre-line;
+    }
+
+    .desc strong {
+      font-weight: 600;
+    }
+
+    .handle {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #1d4ed8;
+      word-break: break-all;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      margin: 10px 0 10px;
+      background: #e5e7eb;
+    }
+
+    .timer-wrap {
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    .timer-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b7280;
+      margin-bottom: 4px;
+    }
+
+    .timer-value {
+      display: inline-block;
+      min-width: 90px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      background: #f9fafb;
+      font-size: 0.9rem;
+    }
+
+    /* Bottom join block (Telegram style) */
+    .bottom {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 100%;
+      max-width: 480px;
+      padding: 10px 14px 14px;
+      background: linear-gradient(180deg, rgba(243, 244, 246, 0), #f9fafb);
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .bottom-inner {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 10px 10px 10px;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .bottom-text {
+      font-size: 0.78rem;
+      color: #4b5563;
+    }
+
+    .bottom-text strong {
+      color: #111827;
+    }
+
+    /* BIG highlighted button */
+    .join-btn {
+      position: relative;
+      margin-top: 2px;
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 13px 16px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      background: linear-gradient(120deg, #16a34a, #22c55e);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      overflow: hidden;
+      animation: fadePulse 2.4s ease-in-out infinite;
+    }
+
+    .join-btn span.icon {
+      font-size: 1.1rem;
+    }
+
+    .join-btn::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: -20%;
+      width: 30%;
+      height: 180%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.1)
+      );
+      transform: translateX(-150%) rotate(20deg);
+      animation: shineMove 2.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shineMove {
+      0%   { transform: translateX(-150%) rotate(20deg); }
+      60%  { transform: translateX(140%) rotate(20deg); }
+      100% { transform: translateX(140%) rotate(20deg); }
+    }
+
+    @keyframes fadePulse {
+      0% {
+        opacity: 0.7;
+        transform: translateY(0);
+        filter: brightness(1);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-1px);
+        filter: brightness(1.1);
+      }
+      100% {
+        opacity: 0.7;
+        transform: translateY(0);
+        filter: brightness(1);
+      }
+    }
+
+    .join-btn.disabled {
+      cursor: not-allowed;
+      background: #9ca3af;
+      animation: none;
+    }
+
+    @media (max-width: 480px) {
+      .main {
+        padding: 16px 12px 80px;
+      }
+
+      .top {
+        padding: 12px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- Top small header like Telegram -->
+    <header class="top">
+      <div class="logo-circle">
+        <!-- Yaha apna logo image ka path lagao -->
+        <img src="logo.jpg" alt="BAJIRAV FIXER Logo" />
+      </div>
+      <div class="top-info">
+        <div class="top-name">BAJIRAV FIXER™🏏</div>
+        <div class="top-subs">82 677 subscribers</div>
+      </div>
+    </header>
+
+    <!-- Main center block -->
+    <main class="main">
+      <!-- Center big logo -->
+      <div class="center-logo-wrap">
+        <div class="center-logo">
+          <!-- Yahi logo center me bhi show hoga -->
+          <img src="logo.jpg" alt="BAJIRAV FIXER Logo" />
+        </div>
+      </div>
+
+      <div class="channel-name">BAJIRAV FIXER™🏏</div>
+      <div class="subs-line">82 677 subscribers</div>
+
+      <div class="desc">
+जिद है मेरी जीत को हराना है
+और जीतकर दिखाना है .[Since 2016] 🇮🇳
+
+💪MOST INDIA POPULAR TIPPAR💠🏆
+
+NICHE SE UPAR TAK KA KAM CHEK KRO ALL PUNTAR 100% Ekureshi Rehti h
+Jo Riport deta hu vhi hota h / Pura market copi krta h Bajirav ki
+      </div>
+
+        <button id="joinBtn" class="join-btn">
+          <span class="icon">🚀</span>
+          <span>Free [BAJIRAV FIXER™🏏] Join</span>
+        </button>
+
+
+      <div class="handle">@BAJIRAV_FIXER</div>
+
+      <div class="divider"></div>
+
+      <div class="timer-wrap">
+        <div class="timer-label">Free join link active for</div>
+        <span id="timer" class="timer-value">00:60</span>
+      </div>
+    </main>
+
+    <!-- Bottom section with big highlighted button -->
+    <div class="bottom">
+      <div class="bottom-inner">
+        <div class="bottom-text">
+          Join the official channel of <strong>BAJIRAV FIXER™🏏</strong>
+        </div>
+        <button id="joinBtn" class="join-btn">
+          <span class="icon">🚀</span>
+          <span>Free [BAJIRAV FIXER™🏏] Join</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 60 second timer
+    let timeLeft = 60;
+    const timerEl = document.getElementById("timer");
+    const joinBtn = document.getElementById("joinBtn");
+
+    function updateTimer() {
+      const s = timeLeft < 10 ? "0" + timeLeft : timeLeft;
+      timerEl.textContent = "00:" + s;
+
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        timerEl.textContent = "00:00";
+        window.location.href = "https://t.me/+-Cm92stj4240ZWQ1";
+
+        // joinBtn.classList.add("disabled");
+        // joinBtn.disabled = true;
+        // joinBtn.textContent = "Time Expired";
+      }
+
+      timeLeft--;
+    }
+
+    const timerInterval = setInterval(updateTimer, 1000);
+    updateTimer(); // initial call
+
+    // Button click redirect
+    joinBtn.addEventListener("click", function () {
+      if (joinBtn.disabled) return;
+
+      // Yaha apna real Telegram channel link daalo
+      const telegramUrl = "https://t.me/+-Cm92stj4240ZWQ1";
+
+      window.location.href = telegramUrl;
+    });
+  </script>
+</body>
+</html>
